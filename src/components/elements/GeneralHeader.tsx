@@ -5,7 +5,7 @@ import { memo } from 'react';
 
 const GeneralHeader = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <Toolbar variant="dense">
         <Typography variant="h6" color="inherit" component="div">
           <span role="img" aria-label="Logo">
