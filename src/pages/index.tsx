@@ -25,7 +25,7 @@ const Converter = ({}: ConverterProps) => {
             <Box sx={{ marginBlockEnd: 2 }}>
               <FormControl fullWidth>
                 <InputLabel id="pair">Pair</InputLabel>
-                <Select labelId="pair" label="Pair" defaultValue={pair} onChange={(e) => setPair(e.target.value)}>
+                <Select labelId="pair" label="Pair" value={pair} onChange={(e) => setPair(e.target.value)}>
                   {dummyPairs.map((dummyPair) => (
                     <MenuItem value={dummyPair.id} selected={dummyPair.id === 'nep/busd'} key={dummyPair.id}>
                       {dummyPair.spend}/{dummyPair.receive}
