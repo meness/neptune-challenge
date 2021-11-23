@@ -2,6 +2,7 @@
 
 body {
   background-color: #fcfcfc;
+  margin: 0 !important;
 }
 
 ::-webkit-scrollbar {
