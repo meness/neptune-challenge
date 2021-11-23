@@ -1,8 +1,8 @@
-import { ChangeEvent, useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 const useConverter = () => {
-  const [spend, setSpend] = useState(0.0);
-  const [receive, setReceive] = useState(0.0);
+  const [spend, setSpend] = useState(0);
+  const [receive, setReceive] = useState(0);
   const [pair, setPair] = useState('nep/busd');
   const [dummyFactor, setDummyFactor] = useState(1);
 
@@ -13,26 +13,26 @@ const useConverter = () => {
 
   useEffect(() => {
     // Reset inputs when dummy factor changes
-    setSpend(0.0);
-    setReceive(0.0);
+    setSpend(0);
+    setReceive(0);
   }, [dummyFactor]);
 
   useEffect(() => {
-    setReceive(spend * dummyFactor);
+    setReceiveValue(spend * dummyFactor);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [spend]);
 
   useEffect(() => {
-    setSpend(receive / dummyFactor);
+    setSpendValue(receive / dummyFactor);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [receive]);
 
-  const setSpendValue = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    setSpend(parseFloat(e.target.value));
+  const setSpendValue = useCallback((value: number) => {
+    setSpend(parseFloat(value.toFixed(2)));
   }, []);
 
-  const setReceiveValue = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    setReceive(parseFloat(e.target.value));
+  const setReceiveValue = useCallback((value: number) => {
+    setReceive(parseFloat(value.toFixed(2)));
   }, []);
 
   return { spend, setSpendValue, receive, setReceiveValue, pair, setPair };

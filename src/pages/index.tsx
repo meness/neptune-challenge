@@ -44,7 +44,7 @@ const Converter = ({}: ConverterProps) => {
                   name="spend"
                   fullWidth
                   value={spend}
-                  onChange={setSpendValue}
+                  onChange={(e) => setSpendValue(parseFloat(e.target.value))}
                   inputProps={{
                     min: 0,
                     inputMode: 'numeric',
@@ -62,7 +62,7 @@ const Converter = ({}: ConverterProps) => {
                   name="receive"
                   fullWidth
                   value={receive}
-                  onChange={setReceiveValue}
+                  onChange={(e) => setReceiveValue(parseFloat(e.target.value))}
                   inputProps={{
                     min: 0,
                     inputMode: 'numeric',
