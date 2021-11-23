@@ -8,6 +8,7 @@ const dummyPairs = [
   { id: 'nep/busd', spend: 'NEP', receive: 'BUSD' },
   { id: 'btc/usdt', spend: 'BTC', receive: 'USDT' },
 ];
+const selectedDummyPair = 'nep/busd';
 
 type ConverterProps = {};
 
@@ -27,7 +28,7 @@ const Converter = ({}: ConverterProps) => {
                 <InputLabel id="pair">Pair</InputLabel>
                 <Select labelId="pair" label="Pair" value={pair} onChange={(e) => setPair(e.target.value)}>
                   {dummyPairs.map((dummyPair) => (
-                    <MenuItem value={dummyPair.id} selected={dummyPair.id === 'nep/busd'} key={dummyPair.id}>
+                      <MenuItem value={dummyPair.id} selected={dummyPair.id === selectedDummyPair} key={dummyPair.id}>
                       {dummyPair.spend}/{dummyPair.receive}
                     </MenuItem>
                   ))}
