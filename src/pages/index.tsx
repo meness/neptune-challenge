@@ -49,7 +49,7 @@ const Converter = ({}: ConverterProps) => {
                     min: 0,
                     inputMode: 'numeric',
                     pattern: '[0-9.]*',
-                    step: '0.1',
+                    step: '0.01',
                   }}
                 />
               </Grid>
@@ -67,7 +67,7 @@ const Converter = ({}: ConverterProps) => {
                     min: 0,
                     inputMode: 'numeric',
                     pattern: '[0-9.]*',
-                    step: '0.1',
+                    step: '0.01',
                   }}
                 />
               </Grid>
