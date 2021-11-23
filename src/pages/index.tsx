@@ -1,5 +1,16 @@
 import { useConverter } from '@hooks';
-import { Card, CardContent, FormControl, Grid, InputLabel, MenuItem, Select, TextField } from '@mui/material';
+import { AutorenewOutlined } from '@mui/icons-material';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  FormControl,
+  Grid,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+} from '@mui/material';
 import { CenterWrapper } from '@wrappers';
 import Head from 'next/head';
 
@@ -21,6 +32,7 @@ const Converter = ({}: ConverterProps) => {
       </Head>
       <CenterWrapper>
         <Card>
+          <CardHeader title="Crypto Converter" subheader="Inputs will be updated instantly." />
           <CardContent>
             <Grid container spacing={2}>
               <Grid item xs={12}>
@@ -35,7 +47,7 @@ const Converter = ({}: ConverterProps) => {
                   </Select>
                 </FormControl>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={12}>
                 <TextField
                   type="number"
                   label="Spend"
@@ -53,7 +65,10 @@ const Converter = ({}: ConverterProps) => {
                   }}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={12} sx={{ textAlign: 'center' }}>
+                <AutorenewOutlined />
+              </Grid>
+              <Grid item xs={12} sm={12}>
                 <TextField
                   type="number"
                   label="Receive"
