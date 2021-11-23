@@ -17,7 +17,7 @@ const Converter = ({}: ConverterProps) => {
   return (
     <>
       <Head>
-        <title>Converter</title>
+        <title>Home</title>
       </Head>
       <CenterWrapper>
         <Card>
