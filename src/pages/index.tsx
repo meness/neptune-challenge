@@ -1,6 +1,5 @@
 import { useConverter } from '@hooks';
-import { Card, CardContent, FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
-import { Box } from '@mui/system';
+import { Card, CardContent, FormControl, Grid, InputLabel, MenuItem, Select, TextField } from '@mui/material';
 import { CenterWrapper } from '@wrappers';
 import Head from 'next/head';
 
@@ -23,51 +22,56 @@ const Converter = ({}: ConverterProps) => {
       <CenterWrapper>
         <Card>
           <CardContent>
-            <Box sx={{ marginBlockEnd: 2 }}>
-              <FormControl fullWidth>
-                <InputLabel id="pair">Pair</InputLabel>
-                <Select labelId="pair" label="Pair" value={pair} onChange={(e) => setPair(e.target.value)}>
-                  {dummyPairs.map((dummyPair) => (
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <FormControl fullWidth>
+                  <InputLabel id="pair">Pair</InputLabel>
+                  <Select labelId="pair" label="Pair" value={pair} onChange={(e) => setPair(e.target.value)}>
+                    {dummyPairs.map((dummyPair) => (
                       <MenuItem value={dummyPair.id} selected={dummyPair.id === selectedDummyPair} key={dummyPair.id}>
-                      {dummyPair.spend}/{dummyPair.receive}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
-            </Box>
-            <Box>
-              <TextField
-                type="number"
-                label="Spend"
-                variant="outlined"
-                placeholder="0"
-                name="spend"
-                value={spend}
-                onChange={setSpendValue}
-                inputProps={{
-                  min: 0,
-                  inputMode: 'numeric',
-                  pattern: '[0-9.]*',
-                  step: '0.1',
-                }}
-              />
-              <TextField
-                type="number"
-                label="Receive"
-                placeholder="0"
-                variant="outlined"
-                name="receive"
-                value={receive}
-                onChange={setReceiveValue}
-                inputProps={{
-                  min: 0,
-                  inputMode: 'numeric',
-                  pattern: '[0-9.]*',
-                  step: '0.1',
-                }}
-                sx={{ marginInlineStart: 1 }}
-              />
-            </Box>
+                        {dummyPair.spend}/{dummyPair.receive}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  type="number"
+                  label="Spend"
+                  variant="outlined"
+                  placeholder="0"
+                  name="spend"
+                  fullWidth
+                  value={spend}
+                  onChange={setSpendValue}
+                  inputProps={{
+                    min: 0,
+                    inputMode: 'numeric',
+                    pattern: '[0-9.]*',
+                    step: '0.1',
+                  }}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  type="number"
+                  label="Receive"
+                  placeholder="0"
+                  variant="outlined"
+                  name="receive"
+                  fullWidth
+                  value={receive}
+                  onChange={setReceiveValue}
+                  inputProps={{
+                    min: 0,
+                    inputMode: 'numeric',
+                    pattern: '[0-9.]*',
+                    step: '0.1',
+                  }}
+                />
+              </Grid>
+            </Grid>
           </CardContent>
         </Card>
       </CenterWrapper>
