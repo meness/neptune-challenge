@@ -1,0 +1,17 @@
+{
+    "extends": [
+        "next/core-web-vitals",
+        "plugin:jsx-a11y/recommended",
+        "prettier"
+    ],
+    "plugins": [
+        "jsx-a11y",
+        "prettier"
+    ],
+    "rules": {
+        "no-unused-vars": "error",
+        "react/jsx-props-no-spreading": "off",
+        "no-console": "error",
+        "prettier/prettier": "error"
+    }
+}

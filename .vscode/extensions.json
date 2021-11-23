@@ -1,0 +1,23 @@
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "mikestead.dotenv",
+    "dbaeumer.vscode-eslint",
+    "cschleiden.vscode-github-actions",
+    "eamodio.gitlens",
+    "orta.vscode-jest",
+    "yzhang.markdown-all-in-one",
+    "pulkitgangwar.nextjs-snippets",
+    "esbenp.prettier-vscode",
+    "aaron-bond.better-comments",
+    "gruntfuggly.todo-tree",
+    "formulahendry.auto-rename-tag",
+    "jasonnutter.search-node-modules",
+    "meganrogge.template-string-converter",
+    "stylelint.vscode-stylelint",
+    "streetsidesoftware.code-spell-checker-persian",
+    "adamvoss.vscode-languagetool",
+    "adamvoss.vscode-languagetool-en",
+    "adamvoss.vscode-languagetool-fa"
+  ]
+}

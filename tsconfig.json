@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@forms": [
+        "./src/components/forms"
+      ],
+      "@elements": [
+        "./src/components/elements"
+      ],
+      "@layouts": [
+        "./src/components/layouts"
+      ],
+      "@containers": [
+        "./src/components/containers"
+      ],
+      "@wrappers": [
+        "./src/components/wrappers"
+      ],
+      "@hooks": [
+        "./src/hooks"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@*": [
+        "./src*"
+      ]
+    },
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+  },
+  "include": [
+    "src",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

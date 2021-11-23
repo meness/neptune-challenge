@@ -1,0 +1,38 @@
+{
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.autoSave": "afterDelay",
+  "files.exclude": {
+    "**/.vscode": true,
+    "**/.next": true,
+    "**/node_modules": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.linkedEditing": true,
+  "html.format.endWithNewline": true,
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "git.autofetch": true,
+  "eslint.lintTask.enable": true,
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "css.validate": false,
+  "editor.autoClosingQuotes": "always",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "cSpell.words": [
+    "browserconfig",
+    "browserslist",
+    "chartjs",
+    "dropzone",
+    "reduxjs",
+    "stylelint",
+    "toastify"
+  ],
+  "cSpell.language": "en-US,fa-IR"
+}
