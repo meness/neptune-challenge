@@ -1,7 +1,8 @@
-import { GitHub } from '@mui/icons-material';
-import { AppBar, IconButton, Toolbar, Typography } from '@mui/material';
+import { ChangeCircle, GitHub } from '@mui/icons-material';
+import { AppBar, IconButton, Stack, Toolbar, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import { memo } from 'react';
+import Link from 'next/link';
 
 const GeneralHeader = () => {
   return (
@@ -14,7 +15,12 @@ const GeneralHeader = () => {
           Challenges
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
-        <Box>
+        <Stack direction="row" spacing={2}>
+          <Link href="/" passHref>
+            <IconButton size="large" edge="end" color="inherit">
+              <ChangeCircle />
+            </IconButton>
+          </Link>
           <IconButton
             size="large"
             edge="end"
@@ -24,7 +30,7 @@ const GeneralHeader = () => {
             color="inherit">
             <GitHub />
           </IconButton>
-        </Box>
+        </Stack>
       </Toolbar>
     </AppBar>
   );
