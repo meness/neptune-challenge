@@ -4,6 +4,7 @@ import {
   Card,
   CardContent,
   CardHeader,
+  Chip,
   FormControl,
   Grid,
   InputLabel,
@@ -38,7 +39,14 @@ const Converter = ({}: ConverterProps) => {
         }}>
         <Grid item xs={12} sm={8} md={7} lg={6}>
           <Card>
-            <CardHeader title="Crypto Converter" subheader="Inputs will be updated instantly." />
+            <CardHeader
+              title={
+                <span>
+                  Crypto Converter <Chip label="Super easy" variant="outlined" color="secondary" size="small" />
+                </span>
+              }
+              subheader="Inputs will be updated instantly."
+            />
             <CardContent>
               <Grid container spacing={2}>
                 <Grid item xs={12}>
