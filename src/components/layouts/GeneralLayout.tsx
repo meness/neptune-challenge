@@ -9,7 +9,7 @@ type GeneralLayoutProps = {
 const GeneralLayout = ({ children }: GeneralLayoutProps) => (
   <>
     <GeneralHeader />
-    <Container component="main" sx={{ marginBlock: { xs: 2 } }}>
+    <Container component="main" sx={{ marginBlock: { xs: 2, md: 0 } }}>
       {children}
     </Container>
   </>
