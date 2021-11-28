@@ -28,11 +28,11 @@ const useConverter = () => {
   }, [receive]);
 
   const setSpendValue = useCallback((value: number) => {
-    setSpend(parseFloat(value.toFixed(2)));
+    setSpend(value);
   }, []);
 
   const setReceiveValue = useCallback((value: number) => {
-    setReceive(parseFloat(value.toFixed(2)));
+    setReceive(value);
   }, []);
 
   return { spend, setSpendValue, receive, setReceiveValue, pair, setPair };

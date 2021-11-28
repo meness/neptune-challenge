@@ -69,7 +69,7 @@ const Converter = ({}: ConverterProps) => {
                     placeholder="0"
                     name="spend"
                     fullWidth
-                    value={spend}
+                    value={parseFloat(spend.toFixed(2))}
                     onChange={(e) => setSpendValue(parseFloat(e.target.value))}
                     inputProps={{
                       min: 0,
@@ -90,7 +90,7 @@ const Converter = ({}: ConverterProps) => {
                     variant="outlined"
                     name="receive"
                     fullWidth
-                    value={receive}
+                    value={parseFloat(receive.toFixed(2))}
                     onChange={(e) => setReceiveValue(parseFloat(e.target.value))}
                     inputProps={{
                       min: 0,
