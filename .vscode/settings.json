@@ -26,10 +26,13 @@
     "strings": true
   },
   "cSpell.words": [
+    "Autorenew",
     "browserconfig",
     "browserslist",
     "chartjs",
     "dropzone",
+    "ethersproject",
+    "Mainet",
     "reduxjs",
     "stylelint",
     "toastify"

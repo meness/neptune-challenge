@@ -2,6 +2,7 @@ import { GitHub } from '@mui/icons-material';
 import { AppBar, IconButton, Stack, Toolbar, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import { memo } from 'react';
+import { ConnectWallet } from '@elements';
 
 const GeneralHeader = () => {
   return (
@@ -14,7 +15,8 @@ const GeneralHeader = () => {
           Challenges
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
-        <Stack direction="row" spacing={2}>
+        <Stack direction="row" spacing={2} sx={{ justifyContent: 'center', display: 'flex' }}>
+          <ConnectWallet />
           <IconButton
             size="large"
             edge="end"
